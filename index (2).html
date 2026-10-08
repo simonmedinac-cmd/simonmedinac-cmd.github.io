@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de privacidad · Suite Clínica Psiquiátrica</title>
+  <meta name="description" content="Política de privacidad del complemento de Google Docs Suite Clínica Psiquiátrica." />
+  <link rel="icon" href="/icono.png" type="image/png" />
+  <style>
+    :root { --fondo: #fcfbf9; --texto: #1f2328; --suave: #5f6368; --acento: oklch(0.471 0.083 201); --borde: #e3e1dc; }
+    @media (prefers-color-scheme: dark) { :root { --fondo: #1a1c1e; --texto: #e3e3e3; --suave: #a8abad; --acento: oklch(0.75 0.09 200); --borde: #34373a; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--fondo); color: var(--texto); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+    h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 6px; }
+    h2 { font-size: 1.15rem; margin: 32px 0 8px; color: var(--acento); }
+    p, li { margin: 0 0 10px; }
+    ul { padding-left: 22px; }
+    a { color: var(--acento); }
+    .vigencia { color: var(--suave); font-size: 0.92rem; margin-bottom: 24px; }
+    .nota { border-left: 3px solid var(--acento); padding: 8px 14px; background: color-mix(in oklch, var(--acento) 7%, transparent); border-radius: 0 8px 8px 0; }
+    nav { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--borde); font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+<main>
+<h1>Política de privacidad</h1>
+<p class="vigencia">Suite Clínica Psiquiátrica (complemento de Google Docs) · Vigente desde el 8 de octubre de 2026</p>
+
+<p class="nota">En resumen: el complemento trabaja dentro del documento que tienes abierto. No tiene servidores propios, no guarda datos de pacientes y no los vende ni los usa para publicidad. Sólo el texto que tú eliges redactar con IA sale del documento, anonimizado, hacia la API de Gemini de Google.</p>
+
+<h2>1. Qué es y quién lo ofrece</h2>
+<p>Suite Clínica Psiquiátrica es un complemento de Google Docs para apoyar la documentación clínica en psiquiatría: plantillas, examen mental, diagnósticos, planes, recetas, rescate de información previa y redacción asistida de la anamnesis. Lo ofrece un desarrollador independiente; puedes escribir a <a href="mailto:simonmedinapsiquiatra@gmail.com">simonmedinapsiquiatra@gmail.com</a>.</p>
+
+<h2>2. Qué datos usa y para qué</h2>
+<p>El complemento pide estos permisos de Google, y sólo los usa para lo que se indica:</p>
+<ul>
+  <li><strong>Ver y editar el documento abierto</strong> (<code>documents.currentonly</code>): leer el documento en que lo usas, para rescatar información previa o datos de la ficha, e insertar lo que eliges (plantillas, diagnósticos, planes, textos). No accede a ningún otro documento ni archivo de tu cuenta.</li>
+  <li><strong>Mostrar ventanas en Google Docs</strong> (<code>script.container.ui</code>): abrir sus paneles y diálogos.</li>
+  <li><strong>Conectarse a servicios externos</strong> (<code>script.external_request</code>), sólo a estos dos:
+    <ul>
+      <li><strong>API de Gemini de Google</strong>, cuando pides redactar con IA en la Anamnesis Próxima. Se envía únicamente el texto que estás redactando, después de quitarle los identificadores directos que se reconocen (RUT, teléfonos, correos, direcciones, nombres y apellidos rotulados). La respuesta pasa por un segundo filtro antes de mostrarse. La anonimización automática reduce el riesgo pero no es perfecta: evita escribir datos identificatorios en ese texto.</li>
+      <li><strong>API de la CIE-11 de la Organización Mundial de la Salud</strong>, cuando buscas un diagnóstico: se envía sólo el término de búsqueda.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>3. Qué se guarda y dónde</h2>
+<ul>
+  <li><strong>En tu documento</strong>: lo que tú insertas. El documento sigue siendo tuyo, en tu cuenta de Google.</li>
+  <li><strong>En el navegador de tu equipo</strong> (almacenamiento local): el borrador de la Anamnesis Próxima, tus datos de profesional para las recetas, el folio de la receta retenida y preferencias como el modelo o el modo oscuro. No salen de tu equipo; se borran al limpiar los datos del sitio en el navegador.</li>
+  <li><strong>En el propio complemento</strong>: sólo su configuración técnica (la clave de la API de Gemini y las credenciales de la API de la OMS) y, por unos minutos, el permiso de acceso a la API de la OMS. Ningún dato de pacientes.</li>
+</ul>
+<p>El complemento no tiene base de datos ni servidores propios, y quien lo desarrolla no recibe ni puede ver el contenido de tus documentos.</p>
+
+<h2>4. Con quién se comparte</h2>
+<p>Con nadie más que los servicios mencionados, y sólo para prestar la función que pides:</p>
+<ul>
+  <li><strong>Google</strong> (Google Docs, Apps Script y la API de Gemini). La API de Gemini se usa en su modalidad de pago, en la que Google no usa las solicitudes ni las respuestas para mejorar sus productos. Véase la <a href="https://policies.google.com/privacy">Política de privacidad de Google</a> y los <a href="https://ai.google.dev/gemini-api/terms">Términos de la API de Gemini</a>.</li>
+  <li><strong>Organización Mundial de la Salud</strong>, para las búsquedas en la CIE-11. Véanse los <a href="https://icd.who.int/icdapi/docs/ICD-API-license.html">términos de la API de la CIE-11</a>.</li>
+</ul>
+<p>No se venden datos, no se usan para publicidad ni para crear perfiles, y no se usan para entrenar modelos de inteligencia artificial.</p>
+
+<h2>5. Uso limitado de los datos de Google</h2>
+<p>El uso y la transferencia a cualquier otra aplicación de la información recibida de las API de Google se ajustan a la <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Datos del Usuario de los Servicios de las API de Google</a>, incluidos los requisitos de Uso Limitado.</p>
+
+<h2>6. Tu responsabilidad con los datos de tus pacientes</h2>
+<p>Como profesional, sigues siendo responsable del tratamiento de los datos de salud de tus pacientes conforme a la normativa vigente (en Chile, entre otras, la Ley 20.584 sobre derechos y deberes de los pacientes y la Ley 19.628 sobre protección de la vida privada). El complemento está diseñado para no exponer la identidad del paciente a la IA, pero eres tú quien decide qué escribes y dónde guardas tus documentos.</p>
+
+<h2>7. Cómo revocar el acceso</h2>
+<p>Puedes desinstalar el complemento desde Google Docs (<em>Extensiones → Complementos → Administrar complementos</em>) y quitarle los permisos en <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>. Lo guardado en tu navegador se borra limpiando los datos del sitio.</p>
+
+<h2>8. Menores de edad</h2>
+<p>El complemento está dirigido a profesionales de la salud, no a menores de edad.</p>
+
+<h2>9. Cambios en esta política</h2>
+<p>Si esta política cambia, se publicará aquí con su nueva fecha de vigencia. Si un cambio amplía los datos que se usan, se pedirá tu autorización de nuevo cuando Google lo exija.</p>
+
+<h2>10. Contacto</h2>
+<p>Para cualquier consulta sobre privacidad: <a href="mailto:simonmedinapsiquiatra@gmail.com">simonmedinapsiquiatra@gmail.com</a>.</p>
+
+<nav><a href="/">Inicio</a> · <a href="/terminos/">Términos de uso</a></nav>
+</main>
+</body>
+</html>
